@@ -13,7 +13,12 @@
 <body>
   <header class="site-header" aria-label="Main site header">
     <div class="container nav">
-      <div class="brand"><a href="#top" aria-label="Pulley Excavating home">Pulley Excavating</a></div>
+      <div class="brand">
+        <a href="#top" aria-label="Pulley Excavating home">
+          <img class="brand__logo" src="pulley_excavating.jpg" alt="Pulley Excavating &amp; Land Service LLC logo" width="108" height="108" decoding="async" />
+          <span class="brand__name">Pulley Excavating</span>
+        </a>
+      </div>
       <nav aria-label="Primary">
         <ul>
           <li><a href="#services">Services</a></li>
@@ -30,6 +35,7 @@
   <section class="hero" role="region" aria-label="Hero">
     <div class="content">
       <div class="copy">
+        <img class="hero-logo" src="pulley_excavating.jpg" alt="Pulley Excavating &amp; Land Service LLC crest" width="200" height="200" decoding="async" />
         <h1>Pulley Excavating &amp; Land Service LLC</h1>
         <p class="subhead">Excavation • Grading • Driveways • Drainage • Land Clearing</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
@@ -132,20 +138,98 @@
 
   <section id="portfolio" class="section portfolio">
     <div class="container">
-      <h2 style="font-family:var(--font-heading); font-size:32px; margin:0 0 18px;">Recent Work</h2>
-      <div class="grid">
-        <figure>
-          <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a9b?q=80&w=1200&auto=format&fit=crop" alt="Before grading – uneven lot with pooling" />
-          <figcaption><strong>Before</strong> – Uneven backyard with water pooling.</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" alt="After grading – smooth, compacted surface" />
-          <figcaption><strong>After</strong> – Smooth, compacted grade with proper runoff.</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1596035162853-44c50b68f9c9?q=80&w=1200&auto=format&fit=crop" alt="Driveway rebuild with fresh gravel" />
-          <figcaption>Driveway rebuild with crown for drainage; compacted base.</figcaption>
-        </figure>
+      <h2 style="font-family:var(--font-heading); font-size:32px; margin:0 0 12px;">Before &amp; After Results</h2>
+      <p class="lead">Drag the slider to see the transformation. Photos below are placeholders—swap in your project shots once uploaded.</p>
+      <div class="before-after-grid">
+        <article class="before-after">
+          <div class="before-after__frame">
+            <img class="before-after__image" src="https://placehold.co/1200x800?text=Before+Demolition+1" alt="Placeholder before photo for detached garage demolition — replace with your own project photo." loading="lazy" />
+            <img class="before-after__image after" src="https://placehold.co/1200x800?text=After+Demolition+1" alt="Placeholder after photo for detached garage demolition — replace with your own project photo." loading="lazy" />
+            <span class="before-after__label before">Before</span>
+            <span class="before-after__label after">After</span>
+            <div class="before-after__divider" aria-hidden="true"></div>
+            <input class="before-after__range" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare before and after for detached garage demolition" />
+          </div>
+          <div class="before-after__meta">
+            <h3>Detached Garage Demolition</h3>
+            <p>Cleared a failing garage, hauled debris, and graded the pad for a clean slate.</p>
+          </div>
+        </article>
+
+        <article class="before-after">
+          <div class="before-after__frame">
+            <img class="before-after__image" src="https://placehold.co/1200x800?text=Before+Demolition+2" alt="Placeholder before photo for mobile home demolition — replace with your own project photo." loading="lazy" />
+            <img class="before-after__image after" src="https://placehold.co/1200x800?text=After+Demolition+2" alt="Placeholder after photo for mobile home demolition — replace with your own project photo." loading="lazy" />
+            <span class="before-after__label before">Before</span>
+            <span class="before-after__label after">After</span>
+            <div class="before-after__divider" aria-hidden="true"></div>
+            <input class="before-after__range" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare before and after for mobile home demolition" />
+          </div>
+          <div class="before-after__meta">
+            <h3>Mobile Home Demo &amp; Cleanup</h3>
+            <p>Safely dismantled the structure, removed utilities, and restored the lot to grade.</p>
+          </div>
+        </article>
+
+        <article class="before-after">
+          <div class="before-after__frame">
+            <img class="before-after__image" src="https://placehold.co/1200x800?text=Before+Drainage+%2B+Parking" alt="Placeholder before photo for drainage and parking lot install — replace with your own project photo." loading="lazy" />
+            <img class="before-after__image after" src="https://placehold.co/1200x800?text=After+Drainage+%2B+Parking" alt="Placeholder after photo for drainage and parking lot install — replace with your own project photo." loading="lazy" />
+            <span class="before-after__label before">Before</span>
+            <span class="before-after__label after">After</span>
+            <div class="before-after__divider" aria-hidden="true"></div>
+            <input class="before-after__range" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare before and after for drainage and parking lot installation" />
+          </div>
+          <div class="before-after__meta">
+            <h3>Drainage &amp; Parking Lot Install</h3>
+            <p>Installed drainage tile, built the stone base, and compacted a new parking surface.</p>
+          </div>
+        </article>
+
+        <article class="before-after">
+          <div class="before-after__frame">
+            <img class="before-after__image" src="https://placehold.co/1200x800?text=Before+Water+Line" alt="Placeholder before photo for new water line install — replace with your own project photo." loading="lazy" />
+            <img class="before-after__image after" src="https://placehold.co/1200x800?text=After+Water+Line" alt="Placeholder after photo for new water line install — replace with your own project photo." loading="lazy" />
+            <span class="before-after__label before">Before</span>
+            <span class="before-after__label after">After</span>
+            <div class="before-after__divider" aria-hidden="true"></div>
+            <input class="before-after__range" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare before and after for water line installation" />
+          </div>
+          <div class="before-after__meta">
+            <h3>New Water Line Install</h3>
+            <p>Trenched the service run, set the new line, pressure-tested, and finished with clean backfill.</p>
+          </div>
+        </article>
+
+        <article class="before-after">
+          <div class="before-after__frame">
+            <img class="before-after__image" src="https://placehold.co/1200x800?text=Before+Driveway+Install" alt="Placeholder before photo for new driveway install — replace with your own project photo." loading="lazy" />
+            <img class="before-after__image after" src="https://placehold.co/1200x800?text=After+Driveway+Install" alt="Placeholder after photo for new driveway install — replace with your own project photo." loading="lazy" />
+            <span class="before-after__label before">Before</span>
+            <span class="before-after__label after">After</span>
+            <div class="before-after__divider" aria-hidden="true"></div>
+            <input class="before-after__range" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare before and after for new driveway install" />
+          </div>
+          <div class="before-after__meta">
+            <h3>New Gravel Driveway</h3>
+            <p>Cut in the drive, packed the subgrade, and finished with compacted gravel for drainage.</p>
+          </div>
+        </article>
+
+        <article class="before-after">
+          <div class="before-after__frame">
+            <img class="before-after__image" src="https://placehold.co/1200x800?text=Before+Driveway+Rehab" alt="Placeholder before photo for driveway rehab — replace with your own project photo." loading="lazy" />
+            <img class="before-after__image after" src="https://placehold.co/1200x800?text=After+Driveway+Rehab" alt="Placeholder after photo for driveway rehab — replace with your own project photo." loading="lazy" />
+            <span class="before-after__label before">Before</span>
+            <span class="before-after__label after">After</span>
+            <div class="before-after__divider" aria-hidden="true"></div>
+            <input class="before-after__range" type="range" min="0" max="100" step="1" value="50" aria-label="Drag to compare before and after for driveway rehab" />
+          </div>
+          <div class="before-after__meta">
+            <h3>Driveway Rehab &amp; Fresh Stone</h3>
+            <p>Repaired washouts, added fabric where needed, and topped with fresh compacted stone.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -196,6 +280,7 @@
         </form>
         <div>
           <div class="quote" style="height:100%;">
+            <img class="contact-logo" src="pulley_excavating.jpg" alt="Pulley Excavating &amp; Land Service LLC logo" width="140" height="140" loading="lazy" decoding="async" />
             <strong>Pulley Excavating &amp; Land Service LLC</strong>
             <p class="muted">Baxter • Cookeville • Upper Cumberland</p>
             <p style="margin:.5rem 0 0;">Phone: <a href="tel:19312143313">(931) 214‑3313</a><br>Email: <a href="mailto:info@pulleyexcavating.com">info@pulleyexcavating.com</a></p>
@@ -214,6 +299,42 @@
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script>
+    (function() {
+      var yearEl = document.getElementById('y');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      var galleries = document.querySelectorAll('.before-after');
+      galleries.forEach(function(block, index) {
+        var range = block.querySelector('.before-after__range');
+        if (!range) return;
+
+        var updateSplit = function(value) {
+          block.style.setProperty('--split', value + '%');
+          range.setAttribute('aria-valuenow', value);
+          range.setAttribute('aria-valuetext', value + '% after shown');
+        };
+
+        if (!range.getAttribute('aria-label')) {
+          var heading = block.querySelector('h3');
+          var labelText = heading ? heading.textContent.trim() : 'before and after slider ' + (index + 1);
+          range.setAttribute('aria-label', 'Drag to compare before and after for ' + labelText);
+        }
+
+        updateSplit(range.value || 50);
+        block.classList.add('is-ready');
+
+        range.addEventListener('input', function(event) {
+          updateSplit(event.target.value);
+        });
+
+        range.addEventListener('change', function(event) {
+          updateSplit(event.target.value);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -23,6 +23,13 @@ This is a small, static site starter for **Pulley Excavating & Land Service LLC*
 - Replace Unsplash image URLs with your own hosted images.
 - Swap the header image in `/assets` if you revise it (keep the same filename or update CSS).
 
+## Before & After gallery
+- Drop finished photos in `assets/before-after/<project-name>/` (e.g., `assets/before-after/demolition-01/before.jpg`). Netlify will serve these files via its global CDN once deployed.
+- Export images around 1600 px wide, compress to ~250 KB if possible, and prefer **WebP** with JPEG fallbacks to keep load times quick.
+- Update the image `src` values inside the `#portfolio` section of `index.html` and swap the placeholder alt text with project-specific descriptions.
+- Need more sets? Duplicate one of the `<article class="before-after">` blocks and adjust the heading, description, and sources.
+- Avoid checking in multi-megabyte photos; for very large libraries consider Netlify Large Media (Git LFS) or an external image CDN like **Cloudinary** (generous free tier) and paste the delivered URLs into the gallery.
+
 ## Email options
 - **Netlify Forms (default)**: works out-of-the-box, stores submissions in Netlify.
 - **SMTP (Bluehost, etc.)**: If you host elsewhere, you can replace the form with `action="server-examples/contact.php"` and use the PHP example. Set SPF/DKIM/DMARC accordingly.
