@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+# Form submission settings
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You | Pulley Excavating &amp; Land Service LLC</title>
+  <meta name="description" content="Thank you for contacting Pulley Excavating &amp; Land Service LLC. We'll get back to you soon!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <header class="site-header" aria-label="Main site header">
+    <div class="container nav">
+      <div class="brand">
+        <a href="/" aria-label="Pulley Excavating home">
+          <img class="brand__logo" src="pulley_excavating.jpg" alt="Pulley Excavating &amp; Land Service LLC logo" width="108" height="108" decoding="async" />
+          <span class="brand__name">Pulley Excavating</span>
+        </a>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="spacer"></div>
+      <a class="btn primary" href="tel:19312143313" aria-label="Call us">Call Us</a>
+    </div>
+  </header>
+
+  <section class="hero" role="region" aria-label="Success message">
+    <div class="content" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+      <div class="copy" style="max-width:600px;">
+        <h1 style="color:var(--color-accent);">Thank You!</h1>
+        <p class="subhead" style="font-size:1.2rem; margin:1rem 0 1.5rem;">Your quote request has been received.</p>
+        <p style="margin:0 0 1.5rem; font-size:1.05rem;">We'll review your project details and get back to you within 1 business day. If you need immediate assistance, feel free to give us a call.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+          <a class="btn primary" href="/">Back to Home</a>
+          <a class="btn secondary" href="tel:19312143313">Call (931) 214-3313</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container row">
+      <div>© <span id="y"></span> Pulley Excavating and Land Service LLC</div>
+      <div class="spacer"></div>
+      <div><a href="/#contact">Get a Quote</a></div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var yearEl = document.getElementById('y');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
