@@ -19,16 +19,20 @@
           <span class="brand__name">Pulley Excavating</span>
         </a>
       </div>
-      <nav aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#about">About</a></li>
+          <li class="nav__cta"><a class="btn primary" href="#contact" aria-label="Get a quote">Get a Quote</a></li>
         </ul>
       </nav>
-      <div class="spacer"></div>
-      <a class="btn primary" href="#contact" aria-label="Get a quote">Get a Quote</a>
     </div>
   </header>
 
@@ -308,6 +312,79 @@
       var yearEl = document.getElementById('y');
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
+      }
+
+      var navToggle = document.querySelector('.nav-toggle');
+      var primaryNav = document.getElementById('primary-navigation');
+
+      if (navToggle && primaryNav) {
+        var mobileQuery = window.matchMedia('(max-width: 720px)');
+        var navIsOpen = false;
+        var isMobile = function() {
+          return mobileQuery.matches;
+        };
+
+        document.body.classList.add('has-nav-toggle');
+
+        var applyNavState = function() {
+          if (!isMobile()) {
+            primaryNav.removeAttribute('hidden');
+            primaryNav.classList.remove('is-open');
+            navToggle.classList.remove('is-active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+            navIsOpen = false;
+            return;
+          }
+
+          navToggle.setAttribute('aria-expanded', navIsOpen ? 'true' : 'false');
+          navToggle.classList.toggle('is-active', navIsOpen);
+          primaryNav.classList.toggle('is-open', navIsOpen);
+          document.body.classList.toggle('nav-open', navIsOpen);
+
+          if (navIsOpen) {
+            primaryNav.removeAttribute('hidden');
+          } else {
+            primaryNav.setAttribute('hidden', '');
+          }
+        };
+
+        applyNavState();
+
+        navToggle.addEventListener('click', function() {
+          if (!isMobile()) return;
+          navIsOpen = !navIsOpen;
+          applyNavState();
+        });
+
+        primaryNav.addEventListener('click', function(event) {
+          if (!isMobile()) return;
+          if (event.target.closest('a')) {
+            navIsOpen = false;
+            applyNavState();
+          }
+        });
+
+        var handleMobileChange = function() {
+          applyNavState();
+        };
+
+        if (typeof mobileQuery.addEventListener === 'function') {
+          mobileQuery.addEventListener('change', handleMobileChange);
+        } else if (typeof mobileQuery.addListener === 'function') {
+          mobileQuery.addListener(handleMobileChange);
+        }
+
+        document.addEventListener('keydown', function(event) {
+          if (!isMobile()) return;
+          if (event.key === 'Escape' && navIsOpen) {
+            navIsOpen = false;
+            applyNavState();
+            navToggle.focus();
+          }
+        });
+
+        window.addEventListener('resize', applyNavState);
       }
 
       var galleries = document.querySelectorAll('.before-after');
